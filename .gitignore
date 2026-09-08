@@ -1,0 +1,26 @@
+# Local builds and IDE state
+build/
+out/
+.vs/
+.vscode/
+.idea/
+.qtcreator/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.sln
+*.vcxproj*
+
+# Binary release assets belong in GitHub Releases, not Git history.
+*.dll
+*.exe
+*.lib
+*.pdb
+*.zip
+*.7z
+
+# Local logs and temporary files
+*.log
+*.tmp
+Thumbs.db
+.DS_Store

@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a public API, example, or documentation improvement
+title: "[Feature]: "
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: Explain the integration problem, not only the desired API.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Include compatibility and migration considerations where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

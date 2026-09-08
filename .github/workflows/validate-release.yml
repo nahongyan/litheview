@@ -1,0 +1,29 @@
+name: Validate GitHub Release assets
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  release-assets:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Download release assets
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release download $env:RELEASE_TAG --dir artifacts
+      - name: Validate SDK archive
+        shell: pwsh
+        run: |
+          $archives = @(Get-ChildItem artifacts/litheview-sdk-*-win-x64.zip)
+          if ($archives.Count -ne 1) {
+            throw "Expected exactly one Windows x64 SDK archive."
+          }
+          ./scripts/verify-release-package.ps1 `
+            -ArchivePath $archives[0].FullName

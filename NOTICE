@@ -1,0 +1,13 @@
+LitheView SDK
+Copyright 2026 LitheView
+
+The public headers, examples, and CMake integration files are licensed under
+the Apache License, Version 2.0.
+
+The compiled LitheView runtime is separately licensed. See
+RUNTIME-LICENSE.md. Third-party software remains subject to its respective
+licenses; binary distributions include THIRD_PARTY_NOTICES.txt and
+SBOM.spdx.json.
+
+LitheView and the LitheView logo are trademarks of their respective owner and
+are not licensed under the Apache License, Version 2.0.

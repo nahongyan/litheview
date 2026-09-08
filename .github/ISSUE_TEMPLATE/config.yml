@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: mailto:1061517027@qq.com?subject=LitheView%20security%20report
+    about: Report vulnerabilities privately; do not open a public issue.
+  - name: Commercial licensing
+    url: mailto:1061517027@qq.com?subject=LitheView%20commercial%20licensing
+    about: Ask about enterprise use, redistribution, and support.
